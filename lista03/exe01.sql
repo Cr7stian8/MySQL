@@ -14,6 +14,13 @@ create table tb_classes(
     primary key(id)
 );
 
+-- Inserindo registros das classes *todos varchar*
+insert into tb_classes(lane,tipo)values("bot","atirador");
+insert into tb_classes(lane,tipo)values("bot","suporte");
+insert into tb_classes(lane,tipo)values("mid","mago");
+insert into tb_classes(lane,tipo)values("top","guerreiro");
+insert into tb_classes(lane,tipo)values("selva","assassino");
+
 -- drop table tb_personagens;
 -- drop table tb_classes;
 
@@ -32,28 +39,21 @@ create table tb_personagens(
     );
 
 -- Inserindo registros dos personagens *todos int menos o nome*
-insert into tb_personagens(nome,idade,ataque,defesa)values("dravem",35,3000,1000);
-insert into tb_personagens(nome,idade,ataque,defesa)values("yumi",777,100,4000);
-insert into tb_personagens(nome,idade,ataque,defesa)values("master",100,2500,3000);
-insert into tb_personagens(nome,idade,ataque,defesa)values("jinx",23,3200,800);
-insert into tb_personagens(nome,idade,ataque,defesa)values("thresh",2000,500,3800);
-insert into tb_personagens(nome,idade,ataque,defesa)values("ezreal",20,3100,50);
-insert into tb_personagens(nome,idade,ataque,defesa)values("yasuo",40,3850,1250);
-insert into tb_personagens(nome,idade,ataque,defesa)values("riven",50,2500,2500);
-
--- Inserindo registros das classes *todos varchar*
-insert into tb_classes(lane,tipo)values("bot","atirador");
-insert into tb_classes(lane,tipo)values("bot","suporte");
-insert into tb_classes(lane,tipo)values("mid","mago");
-insert into tb_classes(lane,tipo)values("top","guerreiro");
-insert into tb_classes(lane,tipo)values("selva","assassino");
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("dravem",35,3000,1000,1);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("yumi",777,100,4000,2);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("master",100,2500,3000,5);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("jinx",23,3200,800,1);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("thresh",2000,500,3800,2);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("ezreal",20,3100,50,1);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("yasuo",40,3850,1250,5);
+insert into tb_personagens(nome,idade,ataque,defesa,classe_id)values("riven",50,2500,2500,4);
 
 -- Realizando os selects propostos no enunciado
 select * from tb_personagens where ataque >2000;
 select * from tb_personagens where ataque >1000 and ataque<2000;
 select * from tb_personagens where nome like "%c%";
-select * from tb_personagens inner join tb_classes on tb_classes.id = tb_personagens.id;
-select * from tb_personagens inner join tb_classes on tb_classes.id = tb_personagens.id where lane = "bot";
+select * from tb_personagens inner join tb_classes on tb_classes.id = tb_personagens.classe_id;
+select * from tb_personagens inner join tb_classes on tb_classes.id = tb_personagens.classe_id where lane = "bot";
 
 -- drop database db_generation_game_online;
 
@@ -62,3 +62,4 @@ select * from tb_personagens inner join tb_classes on tb_classes.id = tb_persona
 
 
 
+	
