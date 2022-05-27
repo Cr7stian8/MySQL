@@ -1,4 +1,4 @@
-## Exercícios MySQL
+# Exercícios MySQL
 <h2>Observações 🔎</h2> 
 --> Codigo criado pelo SGDB MySQL;
 <br>
@@ -11,7 +11,7 @@
 --> Sinta-se a vontade para testar e sugerir mudançãs.
 <BR>
   
-# Explicação 👨‍🏫
+## Explicação 👨‍🏫
 
 <b>MySQL é um sistema de gerenciamento de banco de dados relacional.</b>
 <br><br>
