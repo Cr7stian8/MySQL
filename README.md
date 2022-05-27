@@ -1,6 +1,6 @@
 # Exercícios MySQL
 <h2>Observações 🔎</h2> 
---> Codigo criado pelo SGDB MySQL;
+--> Codigo criado pelo SGDB(sistema gerenciador de banco de dados)  MySQL;
 <br>
 --> Você pode copiar o código e colar em uma query para rodar o código e visualizar as tabelas;
 <br>
@@ -21,7 +21,7 @@
 <br><br>
 <b>CREATE TABLE -> </b>Responsável por criar uma tabela dentro de um banco de dados;
 <br><br>
-<b>SELECT -> </b>responsável junto com outras palavras por exibir no SGDB(sistema de gerenciamento de dados) as tabelas;
+<b>SELECT -> </b>responsável junto com outras palavras por exibir no SGDB as tabelas;
 <br><br>
 <b>Outras palavras podem ser visualizadas ao abrir os exercícios.</b>
 <br><br>
